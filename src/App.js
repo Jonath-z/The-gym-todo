@@ -25,7 +25,6 @@ function App() {
     const newTodos = todos.map((_todo) =>
       todo.task === _todo.task ? { ..._todo, done: !_todo.done } : _todo
     );
-    console.log({ newTodos });
     setTodos(newTodos);
     localStorage.setItem("todos", JSON.stringify(newTodos));
   }
